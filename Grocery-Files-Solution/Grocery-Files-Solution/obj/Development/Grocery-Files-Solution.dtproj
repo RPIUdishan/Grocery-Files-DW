@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-OHPI2QJ</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIPZAhCgz2UqpGgeLi/GkSAAAAAACAAAAAAAQZgAAAAEAACAAAAA2u3Ag1wO+KypP8sGzOfN1/KTOv4Ur9SLLV4O+vqJ9XAAAAAAOgAAAAAIAACAAAABcBgoDoaS8K+ZbtKSkjlgmZDX/HNDgFKpK1p7jspVfg5AAAADUge3CL5PjHt2/eBLRD2bQu166NG+KC5NAn7+qQSg76YtrYGsoqmbkhaBIhbmwjgZZJUIwenAr4tbCKnNW0/VDnWR2ZQ3TYCU1ItuqnjjAcLU3ksE9CR1/tdDCeCJzWlAkKvMKE7lNuR7cz/z/34bfuNndEg1qJjY381ftDcT1b2afbJ+CkaoM1xg74OhAjFpAAAAAd89ArriNT7U6X2aTvkzPjlK/PMRVd4bFlFds1O9YJ67QPNpdSrdspSWQNi9PQuuIMDQmD+2r9AYzvD+aP90lyQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIPZAhCgz2UqpGgeLi/GkSAAAAAACAAAAAAAQZgAAAAEAACAAAABtTWG3cLYEI8w3P3OwGbEt3sIkrKTRp/35iwVqLTzQyQAAAAAOgAAAAAIAACAAAABauxXoxVv1cePdef3/f9bXptbzyehaFpuBlPiEAS/KkZAAAAAQbfpVITRocsxq0tSp0sSJjIY4kqJ/uFIrO4mIhZ2ubi4IStBonruIKnz0g0VTEX3mUE6kLl6cXx7BAOS3eEdPNezlaqE0ynH+fgBVz3f3uSZzuCYnz+DOWTY39VGcB20goOW96OlEcSq1b2NYlGm8rXP+y1c0e2RaD/hAmgOuswkM0gzdxpCR01Lvxlkl2pZAAAAAGs+SJN2Ka+AOPQn8q+K7SGO35GkP6M8x2EIh4XSErm+xkoNchVPBv+o/HdTFTsgArGNizpuOE5x7jBxDz+ljtg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -181,7 +181,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\Assignment\Grocery-Files-DW\Resources\holidays_events.xls;Extended Properties="Excel 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\Assignment\Grocery-Files-DW\Resources\holidays_events.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -312,13 +312,7 @@
         <LinkedAzureSSISIR />
         <LinkedAzureStorage />
         <RemoteExecutionFolder />
-        <ParameterConfigurationValues>
-          <ConfigurationSetting>
-            <Id>LastModifiedTime</Id>
-            <Name>LastModifiedTime</Name>
-            <Value xsi:type="xsd:dateTime">2020-04-27T07:39:42.9944786Z</Value>
-          </ConfigurationSetting>
-        </ParameterConfigurationValues>
+        <ParameterConfigurationValues />
       </Options>
     </Configuration>
   </Configurations>
