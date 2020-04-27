@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Grocery-Files-Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{0F694939-58B0-499A-BE52-173BD5CBBC0B}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{5965ACA8-EFE4-4C8E-8B21-75F8FB465D53}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -457,6 +457,23 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute Transformations"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{D2557617-BE89-483C-A492-CB1BD8D945B8}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Transformations"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>Grocery-Files-Transformation.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Extract holiday events data to holiday events staging"
       DTS:CreationName="Microsoft.Pipeline"
@@ -3361,6 +3378,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
       DTS:To="Package\Extraction transaction to staging" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{660B8190-907F-4452-8673-770C7C86FA21}"
+      DTS:From="Package\Extraction transaction to staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Execute Transformations" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -3598,6 +3623,44 @@
                     Point3="99,18.5" />
                   <mssgle:LineSegment
                     End="99,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Execute Transformations"
+          TopLeft="1082.5,325.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="793.166666666667,506.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="380.833333333333,-139"
+              Start="0,0"
+              End="380.833333333333,-131.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-52.1736887360275" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-52.1736887360275"
+                    Point2="0,-56.1736887360275"
+                    Point3="4,-56.1736887360275" />
+                  <mssgle:LineSegment
+                    End="376.833333333333,-56.1736887360275" />
+                  <mssgle:CubicBezierSegment
+                    Point1="376.833333333333,-56.1736887360275"
+                    Point2="380.833333333333,-56.1736887360275"
+                    Point3="380.833333333333,-60.1736887360275" />
+                  <mssgle:LineSegment
+                    End="380.833333333333,-131.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
