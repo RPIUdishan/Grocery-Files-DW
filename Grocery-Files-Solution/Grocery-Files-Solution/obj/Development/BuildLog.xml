@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Grocery-Files-Solution</Name>
-    <LastWriteTime>2020-04-27T07:48:10.8120155Z</LastWriteTime>
+    <LastWriteTime>2020-04-27T07:57:10.130641Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Grocery-Files-Staging.dtsx</Name>
-      <LastWriteTime>2020-04-27T07:48:10.803085Z</LastWriteTime>
+      <LastWriteTime>2020-04-27T07:57:08.3072568Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
