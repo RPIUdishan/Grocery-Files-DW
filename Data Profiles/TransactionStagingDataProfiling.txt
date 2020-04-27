@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{738E1A98-0646-4AC2-846E-1F30B6128D32}" Name="DESKTOP-OHPI2QJ\SQLEXPRESS.Grocery_Files_Staging">
+      <DtsConnectionManagerID>DESKTOP-OHPI2QJ\SQLEXPRESS.Grocery_Files_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{6CB11299-0A11-4A99-9AF0-B4F55745D3CA}" Name="HolidayEventsStagingDataProfile.txt">
+      <DtsConnectionManagerID>HolidayEventsStagingDataProfile.txt</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{AF3E194F-0898-42E4-B80E-71D14BF78937}" Name="ItemsStagingDataProfiling.txt">
+      <DtsConnectionManagerID>ItemsStagingDataProfiling.txt</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{B975A3F1-EFF1-458A-A68B-5844965C17BF}" Name="OilStagingDataProfiling.txt">
+      <DtsConnectionManagerID>OilStagingDataProfiling.txt</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{035AA5DE-8B93-4465-A6AC-E4CEBC2762BE}" Name="StoresStagingDataProfiling.txt">
+      <DtsConnectionManagerID>StoresStagingDataProfiling.txt</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{59E2A4E9-42AF-4CC1-BA22-C44B29447162}" Name="TestStagingDataProfiling.txt">
+      <DtsConnectionManagerID>TestStagingDataProfiling.txt</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D6843D40-F129-4150-A0F3-9169656AD237}" Name="TrainStagingDataProfiling.txt">
+      <DtsConnectionManagerID>TrainStagingDataProfiling.txt</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D627C650-7740-4113-B04F-426E4A6EAB11}" Name="TransactionStagingDataProfiling.txt">
+      <DtsConnectionManagerID>TransactionStagingDataProfiling.txt</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table Schema="dbo" Table="TransactionStaging" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table Schema="dbo" Table="TransactionStaging" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table Schema="dbo" Table="TransactionStaging" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table Schema="dbo" Table="TransactionStaging" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table Schema="dbo" Table="TransactionStaging" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table Schema="dbo" Table="TransactionStaging" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table Schema="dbo" Table="TransactionStaging" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="date" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="store_nbr" SqlDbType="NVarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="transactions" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="id" SqlDbType="NVarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="date" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2013-01-01T00:00:00.0000000</MinValue>
+        <MaxValue>2016-09-08T00:00:00.0000000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="transactions" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>5</MinValue>
+        <MaxValue>8359</MaxValue>
+        <Mean>1700.82737468528</Mean>
+        <StdDev>960.744172129085</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="store_nbr" SqlDbType="NVarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>2</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>12035</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>53500</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="id" SqlDbType="NVarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>5</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>900</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>9</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>9000</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>55536</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>90</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="date" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1342</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="store_nbr" SqlDbType="NVarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>53</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>1338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>34</Value>
+            <Count>1339</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>39</Value>
+            <Count>1339</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>15</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>45</Value>
+            <Count>1338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>51</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>26</Value>
+            <Count>1339</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>21</Value>
+            <Count>409</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>23</Value>
+            <Count>1339</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>11</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>46</Value>
+            <Count>1338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>41</Value>
+            <Count>1338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>35</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>49</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>16</Value>
+            <Count>1338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>53</Value>
+            <Count>827</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>31</Value>
+            <Count>1339</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>22</Value>
+            <Count>332</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>54</Value>
+            <Count>1336</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>10</Value>
+            <Count>1336</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>27</Value>
+            <Count>1338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>40</Value>
+            <Count>1338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>13</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>47</Value>
+            <Count>1338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>43</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>38</Value>
+            <Count>1339</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>24</Value>
+            <Count>1238</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>29</Value>
+            <Count>535</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>14</Value>
+            <Count>1299</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>19</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20</Value>
+            <Count>570</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>12</Value>
+            <Count>1277</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>44</Value>
+            <Count>1338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>50</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>42</Value>
+            <Count>381</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>17</Value>
+            <Count>1335</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>30</Value>
+            <Count>1316</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>37</Value>
+            <Count>1339</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>33</Value>
+            <Count>1339</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>8</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>25</Value>
+            <Count>1323</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>28</Value>
+            <Count>1338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>48</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>1338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>32</Value>
+            <Count>1338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>36</Value>
+            <Count>1212</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>9</Value>
+            <Count>1337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>18</Value>
+            <Count>1312</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <KeyColumns>
+          <Column Name="id" SqlDbType="NVarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="id" SqlDbType="NVarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>65535</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="store_nbr" SqlDbType="NVarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\d\d</RegexText>
+            <Frequency>82</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\d</RegexText>
+            <Frequency>18</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <Column Name="id" SqlDbType="NVarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\d\d\d\d\d</RegexText>
+            <Frequency>84</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\d\d\d\d</RegexText>
+            <Frequency>14</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <DeterminantColumns>
+          <Column Name="id" SqlDbType="NVarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="store_nbr" SqlDbType="NVarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{738E1A98-0646-4AC2-846E-1F30B6128D32}</DataSourceID>
+        <Table DataSource="DESKTOP-OHPI2QJ\SQLEXPRESS" Database="Grocery_Files_Staging" Schema="dbo" Table="TransactionStaging" RowCount="65535" />
+        <DeterminantColumns>
+          <Column Name="id" SqlDbType="NVarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="date" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
