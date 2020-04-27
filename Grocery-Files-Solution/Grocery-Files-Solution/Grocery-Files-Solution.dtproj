@@ -26,12 +26,13 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-OHPI2QJ</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIPZAhCgz2UqpGgeLi/GkSAAAAAACAAAAAAAQZgAAAAEAACAAAAAItlGtFNQ7JukKTfdl+mXUtkvZpyIisf+8gMChJv1tfgAAAAAOgAAAAAIAACAAAADXTIgKsYWPBFATkYBNun7KV6r8sNxzrHJP36SMV0Nx7ZAAAACnrfT6ZRiN/gywoR7gdMkj/ehqmUft4sdn3vmmH3G7QmZDjgIBDYCSCicfV+rminm8BAn3RulSvXK6jZzFapl6dKomDEbnfNWXZAi5JeIdin8Yru49FDk8nmqtWvsWAd3EM7Eu3qWfarqGOSHtjKi0n87jfRCqfsWrbogLFt5UR5lXieUMcyG3GePDwW13w2lAAAAAd6xtlnkknjgzJmcuzbJ4Zmeos+JfgQT98YGb1zCfBcOxsSlYDOoqkHlLwWduWHXybTBjv8WtRvi9GxnrBUwBeg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIPZAhCgz2UqpGgeLi/GkSAAAAAACAAAAAAAQZgAAAAEAACAAAACcbxf/ao28DyORtHKS9wf6QmH4tch2NnREYO9gb6Tt3wAAAAAOgAAAAAIAACAAAAAea6tRr1un9OJP0oYKYS9BTD3vxmViQiwJuDbS8kNF6ZAAAABdSCJQ07+zpl6zSkMW0yj6j/cwS0TPOyjZgwhBaX2LnoHbMdistO8urDKTlv3d/i603xV9/mNRamGZ4z34AgO93hZ8Jhp7w8nFVfCy5LD1gqmVLmP/tEGGIN5N3aJ0A1EepR4pN507zIYwUVxKjXt0iAguDWaLKtBmt2ZK2ytu0pSiVFN01C6FXz+YOlhil/1AAAAA926kISfw9hsOGP05l5t8ZFBZvyi+vmAe2elEQuQVf5i+ZufHCDDxCMsg/SrvhShJNKIQJFxg5BdL7OxiIY8GUg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="Grocery-Files-Staging.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Grocery-Files-Profiling.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Grocery-Files-Transformation.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -2114,6 +2115,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Grocery-Files-Transformation.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{7701B034-0919-41F8-A179-E7793E71673E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Grocery-Files-Transformation</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{44B04C97-7221-4549-9F02-6B5720B0C9CA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
